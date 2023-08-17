@@ -15,9 +15,7 @@ class _ResultState extends State<Result> {
       body: Column(
         children: [
           LineChart(
-            LineChartData(
-                // read about it in the LineChartData section
-                ),
+            LineChartData(lineBarsData: LineChartBarData()),
           ),
           ElevatedButton(
               onPressed: () async {
