@@ -106,18 +106,8 @@ class _MyAppState extends State<MyApp> {
                           await api.insert(evalDate, rate, controller.text);
                       print(res);
 
-                      //----------------------------
-                      score.add(
-                        Score(
-                          rate: rate,
-                          comment: controller.text,
-                        ),
-                      );
-                      setState(() {
-                        listView;
-                        enabled = false;
-                      });
-                      print(score.length);
+                      showReview(
+                          evalDate: selectedDay.toString().split(" ")[0]);
                     }
                   : null,
               child: const Text('저장하기'),
